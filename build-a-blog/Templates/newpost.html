@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Write a new blog post!</h3>
+<form method="post">
+    <label for = "subject">Subject </label>
+    <br>
+    <input name="subject" type="text" value="{{subject}}"/>
+    <br>
+    <label for = "new_post">New Post</label><br>
+    <textarea name = "new_post" rows = "6" cols = "60"></textarea>
+    <br>
+    <span class = "error"> </span>
+    <br>
+
+</form>
+
+<input type="submit" value="Submit New Post"/>
+{% endblock %}
