@@ -7,13 +7,13 @@
     <br>
     <input name="subject" type="text" value="{{subject}}"/>
     <br>
-    <label for = "new_post">New Post</label><br>
-    <textarea name = "new_post" rows = "6" cols = "60"></textarea>
+    <label for = "post">New Post</label><br>
+    <textarea name = "post" rows = "6" cols = "60" value="{{post}}"></textarea>
     <br>
-    <span class = "error"> </span>
+    <span class = "error">{{error}} </span>
     <br>
 
+    <input type="submit" value="Submit New Post"/>
 </form>
 
-<input type="submit" value="Submit New Post"/>
 {% endblock %}
