@@ -72,8 +72,10 @@ class NewPost(Handler):
         self.render('newpost.html')
 
     def post(self):
+
         subject = self.request.get("subject")
         post = self.request.get("post")
+
 
         if subject and post:
             e = Entry(subject = subject, post = post)
@@ -83,7 +85,7 @@ class NewPost(Handler):
         else:
 
             error = "Both Subject and New Post must be filled out!"
-            self.render('newpost.html', error=error, subject = subject, post = post)
+            self.render('newpost.html', error = error, post = post, subject = subject)
 
 app = webapp2.WSGIApplication([
     ('/', Home),
